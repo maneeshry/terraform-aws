@@ -5,10 +5,10 @@ variable "instance" {
 
 variable "name" {
   type = any
-  default =  {
+  default = {
     dev = "dev"
-    qa = "qa"
-  } 
+    qa  = "qa"
+  }
 }
 
 
@@ -18,11 +18,11 @@ variable "region" {
 
 variable "security_group_cidr" {
   type = any
-  default =  {
+  default = {
     dev = "173.31.2.0/24"
-    qa = "174.31.3.0/24"
-  } 
-  
+    qa  = "174.31.3.0/24"
+  }
+
 }
 
 variable "key_name" {
@@ -32,21 +32,11 @@ variable "key_name" {
 variable "cidr" {
   type = any
   default = {
-    
+
     #default = "172.31.1.0/24"
     dev = "175.31.2.0/24"
-    qa = "174.31.3.0/24"
-    }
-  
+    qa  = "174.31.3.0/24"
+  }
+
 }
 
-variable "test" {
-  type = any
-  default = [
-    {
-    #default = "172.31.1.0/24"
-    dev = "173.31.2.0/24"
-    qa = "174.31.3.0/24"
-    }
-  ]
-}
