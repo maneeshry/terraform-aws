@@ -1,8 +1,8 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = lookup(var.name,terraform.workspace)
-  cidr = lookup(var.cidr,terraform.workspace)
+  name = "environmet-${lookup(var.name, terraform.workspace)}"
+  cidr = lookup(var.cidr, terraform.workspace)
 
   azs = ["${var.region}a"]
 
