@@ -1,6 +1,5 @@
 variable "instance" {
   default = "t2.micro"
-
 }
 
 variable "name" {
@@ -19,10 +18,9 @@ variable "region" {
 variable "security_group_cidr" {
   type = any
   default = {
-    dev = "173.31.2.0/24"
-    qa  = "174.31.3.0/24"
+    dev = "174.31.1.1/24"
+    qa  = "174.31.1.0/24"
   }
-
 }
 
 variable "key_name" {
@@ -32,11 +30,50 @@ variable "key_name" {
 variable "cidr" {
   type = any
   default = {
-
-    #default = "172.31.1.0/24"
-    dev = "175.31.2.0/24"
-    qa  = "174.31.3.0/24"
+    dev = "174.31.1.1/28"
+    qa  = "174.31.1.0/28"
   }
+}
 
+variable "iam-user-groups" {
+  type = any
+  default = {
+    devops = "devops"
+    dev    = "dev"
+    qa     = "qa"
+  }
+}
+
+variable "iam-users" {
+  type = map(any)
+  default = {
+    manoj = {
+      username = "manoj"
+    }
+    chinni = {
+      username = "chinni"
+    }
+    maneesh = {
+      username = "maneesh"
+    }
+    itachi = {
+      username = "itachi"
+    }
+  }
+}
+
+variable "iam-groups" {
+  type = map(any)
+  default = {
+    devops = {
+      groupname = "devops"
+    }
+    dev = {
+      groupname = "dev"
+    }
+    qa = {
+      groupname = "qa"
+    }
+  }
 }
 
