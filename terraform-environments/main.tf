@@ -67,7 +67,7 @@ resource "aws_security_group" "ec2_security_group" {
   #     cidr_blocks = [lookup(var.cidr, terraform.workspace)]
   #   }
   # }
-##################################
+  ##################################
 
 }
 
